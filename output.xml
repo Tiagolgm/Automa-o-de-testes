@@ -1,86 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230228 00:34:28.271" rpa="false" schemaversion="3">
-<suite id="s1" name="Bdd" source="E:\Rúbia Augusto\Documents\Robot Framework Web\bdd.robot">
-<test id="s1-t1" name="Cenario 1: executar vídeo no site do youtube" line="42">
-<kw name="Dado que eu acesso o site do youtube">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230301 02:00:29.520" rpa="false" schemaversion="3">
+<suite id="s1" name="Estrutura" source="E:\Rúbia Augusto\Documents\Robot Framework Web\projeto1\estrutura.robot">
+<test id="s1-t1" name="Cenario 1: teste de abrir site do google" line="20">
+<kw name="abrir site do google">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
+<arg>https://www.google.com.br/</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230228 00:34:28.626" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
-<status status="PASS" starttime="20230228 00:34:28.625" endtime="20230228 00:34:36.677"/>
+<msg timestamp="20230301 02:00:29.857" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com.br/'.</msg>
+<status status="PASS" starttime="20230301 02:00:29.856" endtime="20230301 02:00:34.495"/>
 </kw>
-<status status="PASS" starttime="20230228 00:34:28.625" endtime="20230228 00:34:36.677"/>
+<status status="PASS" starttime="20230301 02:00:29.855" endtime="20230301 02:00:34.495"/>
 </kw>
-<kw name="Quando digito o nome da música">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Input_Pesquisa}</arg>
-<arg>${NomeDaMusica}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230228 00:34:36.681" level="INFO">Typing text 'Ariana Grande Positions' into text field '//input[@id="search"]'.</msg>
-<status status="PASS" starttime="20230228 00:34:36.679" endtime="20230228 00:34:37.244"/>
-</kw>
-<status status="PASS" starttime="20230228 00:34:36.679" endtime="20230228 00:34:37.244"/>
-</kw>
-<kw name="E clico no botão buscar">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${button_Pesquisa}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230228 00:34:37.247" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
-<status status="PASS" starttime="20230228 00:34:37.246" endtime="20230228 00:34:37.830"/>
-</kw>
-<status status="PASS" starttime="20230228 00:34:37.245" endtime="20230228 00:34:37.830"/>
-</kw>
-<kw name="E clico na primeira opção da lista">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Primeiro}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230228 00:34:37.833" endtime="20230228 00:34:38.996"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Primeiro}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230228 00:34:38.997" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
-<status status="PASS" starttime="20230228 00:34:38.996" endtime="20230228 00:34:39.950"/>
-</kw>
-<status status="PASS" starttime="20230228 00:34:37.833" endtime="20230228 00:34:39.951"/>
-</kw>
-<kw name="Então o vídeo é executado">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Primeiro}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230228 00:34:39.953" endtime="20230228 00:34:40.058"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${Prova}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230228 00:34:40.321" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230228 00:34:40.321" level="FAIL">Element with locator '//ytd-button-renderer[@class="style-scope ytd-menu-renderer"]' not found.</msg>
-<status status="FAIL" starttime="20230228 00:34:40.059" endtime="20230228 00:34:40.326"/>
-</kw>
-<kw name="Sleep 1s">
-<status status="NOT RUN" starttime="20230228 00:34:40.333" endtime="20230228 00:34:40.333"/>
-</kw>
+<kw name="fechar navegador">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20230228 00:34:40.333" endtime="20230228 00:34:40.333"/>
+<status status="PASS" starttime="20230301 02:00:34.496" endtime="20230301 02:00:36.818"/>
 </kw>
-<status status="FAIL" starttime="20230228 00:34:39.953" endtime="20230228 00:34:40.334"/>
+<status status="PASS" starttime="20230301 02:00:34.496" endtime="20230301 02:00:36.819"/>
 </kw>
-<status status="FAIL" starttime="20230228 00:34:28.624" endtime="20230228 00:34:40.334">Element with locator '//ytd-button-renderer[@class="style-scope ytd-menu-renderer"]' not found.</status>
+<status status="PASS" starttime="20230301 02:00:29.842" endtime="20230301 02:00:36.821"/>
 </test>
-<status status="FAIL" starttime="20230228 00:34:28.273" endtime="20230228 00:34:40.337"/>
+<test id="s1-t2" name="Cenario 2: teste de abrir site da globo" line="24">
+<kw name="abrir site da globo">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.globo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230301 02:00:36.826" level="INFO">Opening browser 'chrome' to base url 'https://www.globo.com/'.</msg>
+<status status="PASS" starttime="20230301 02:00:36.826" endtime="20230301 02:00:45.202"/>
+</kw>
+<status status="PASS" starttime="20230301 02:00:36.826" endtime="20230301 02:00:45.202"/>
+</kw>
+<kw name="fechar navegador">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230301 02:00:45.203" endtime="20230301 02:00:47.557"/>
+</kw>
+<status status="PASS" starttime="20230301 02:00:45.203" endtime="20230301 02:00:47.558"/>
+</kw>
+<status status="PASS" starttime="20230301 02:00:36.826" endtime="20230301 02:00:47.559"/>
+</test>
+<status status="PASS" starttime="20230301 02:00:29.520" endtime="20230301 02:00:47.564"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Bdd">Bdd</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Estrutura">Estrutura</stat>
 </suite>
 </statistics>
 <errors>

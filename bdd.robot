@@ -13,7 +13,7 @@ ${Browser}      chrome
 ${Input_Pesquisa}       //input[@id="search"]
 ${button_Pesquisa}      //button[@id="search-icon-legacy"]
 ${Primeiro}             (//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]
-${Prova}                //ytd-button-renderer[@class="style-scope ytd-menu-renderer"]
+${Prova}                (//div[@id="subscribe-button"])[1]
 
 *** Keywords ***
 Dado que eu acesso o site do youtube
@@ -27,11 +27,11 @@ E clico no botão buscar
 
 
 E clico na primeira opção da lista
-    Wait Until Element Is Visible   ${Primeiro}     10
+    Wait Until Element Is Visible   ${Primeiro}  10
     Click Element       ${Primeiro}
 
 Então o vídeo é executado
-    Wait Until Element Is Visible   ${Primeiro}     10
+    Wait Until Element Is Visible   ${Prova}  10
     Element Should Be Visible       ${Prova}
     Sleep 1s
     Close Browser

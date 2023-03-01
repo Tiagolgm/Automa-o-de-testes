@@ -2,8 +2,7 @@
 Library     SeleniumLibrary
 
 *** Variables ***
-$(variavel1)    
-$(variável2)
+
 
 *** Keywords ***
 abrir site do google

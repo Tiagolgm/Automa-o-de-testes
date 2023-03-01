@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230228 20:47:58.166" rpa="false" schemaversion="3">
+<suite id="s1" name="Bdd" source="E:\Rúbia Augusto\Documents\Robot Framework Web\projeto1\bdd.robot">
+<test id="s1-t1" name="Cenario 1: executar vídeo no site do youtube" line="42">
+<kw name="Dado que eu acesso o site do youtube">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230228 20:47:58.499" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20230228 20:47:58.498" endtime="20230228 20:48:06.391"/>
+</kw>
+<status status="PASS" starttime="20230228 20:47:58.498" endtime="20230228 20:48:06.391"/>
+</kw>
+<kw name="Quando digito o nome da música">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Pesquisa}</arg>
+<arg>${NomeDaMusica}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230228 20:48:06.395" level="INFO">Typing text 'Ariana Grande Positions' into text field '//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20230228 20:48:06.392" endtime="20230228 20:48:06.806"/>
+</kw>
+<status status="PASS" starttime="20230228 20:48:06.392" endtime="20230228 20:48:06.806"/>
+</kw>
+<kw name="E clico no botão buscar">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_Pesquisa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230228 20:48:06.809" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
+<status status="PASS" starttime="20230228 20:48:06.808" endtime="20230228 20:48:07.334"/>
+</kw>
+<status status="PASS" starttime="20230228 20:48:06.807" endtime="20230228 20:48:07.334"/>
+</kw>
+<kw name="E clico na primeira opção da lista">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Primeiro}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 20:48:07.337" endtime="20230228 20:48:08.737"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Primeiro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230228 20:48:08.738" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
+<status status="PASS" starttime="20230228 20:48:08.737" endtime="20230228 20:48:09.505"/>
+</kw>
+<status status="PASS" starttime="20230228 20:48:07.336" endtime="20230228 20:48:09.506"/>
+</kw>
+<kw name="Então o vídeo é executado">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Prova}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230228 20:48:34.011" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00A337D3]
+	(No symbol) [0x009C8B81]
+	(No symbol) [0x008CB36D]
+	(No symbol) [0x008AE5DA]
+	(No symbol) [0x0091F0CB]
+	(No symbol) [0x00930A56]
+	(No symbol) [0x0091B216]
+	(No symbol) [0x008F0D97]
+	(No symbol) [0x008F253D]
+	GetHandleVerifier [0x00CAABF2+2510930]
+	GetHandleVerifier [0x00CD8EC1+2700065]
+	GetHandleVerifier [0x00CDC86C+2714828]
+	GetHandleVerifier [0x00AE3480+645344]
+	(No symbol) [0x009D0FD2]
+	(No symbol) [0x009D6C68]
+	(No symbol) [0x009D6D4B]
+	(No symbol) [0x009E0D6B]
+	BaseThreadInitThunk [0x77C500F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77EA7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77EA7B8E+238]
+</msg>
+<msg timestamp="20230228 20:48:34.038" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00A337D3]
+	(No symbol) [0x009C8B81]
+	(No symbol) [0x008CB36D]
+	(No symbol) [0x008AE5DA]
+	(No symbol) [0x0091F0CB]
+	(No symbol) [0x00930A56]
+	(No symbol) [0x0091B216]
+	(No symbol) [0x008F0D97]
+	(No symbol) [0x008F253D]
+	GetHandleVerifier [0x00CAABF2+2510930]
+	GetHandleVerifier [0x00CD8EC1+2700065]
+	GetHandleVerifier [0x00CDC86C+2714828]
+	GetHandleVerifier [0x00AE3480+645344]
+	(No symbol) [0x009D0FD2]
+	(No symbol) [0x009D6C68]
+	(No symbol) [0x009D6D4B]
+	(No symbol) [0x009E0D6B]
+	BaseThreadInitThunk [0x77C500F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77EA7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77EA7B8E+238]
+</msg>
+<status status="FAIL" starttime="20230228 20:48:09.508" endtime="20230228 20:48:34.048"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230228 20:48:34.048" endtime="20230228 20:48:34.048"/>
+</kw>
+<kw name="Sleep 1s">
+<status status="NOT RUN" starttime="20230228 20:48:34.055" endtime="20230228 20:48:34.055"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230228 20:48:34.055" endtime="20230228 20:48:34.056"/>
+</kw>
+<status status="FAIL" starttime="20230228 20:48:09.508" endtime="20230228 20:48:34.056"/>
+</kw>
+<status status="FAIL" starttime="20230228 20:47:58.497" endtime="20230228 20:48:34.058">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00A337D3]
+	(No symbol) [0x009C8B81]
+	(No symbol) [0x008CB36D]
+	(No symbol) [0x008AE5DA]
+	(No symbol) [0x0091F0CB]
+	(No symbol) [0x00930A56]
+	(No symbol) [0x0091B216]
+	(No symbol) [0x008F0D97]
+	(No symbol) [0x008F253D]
+	GetHandleVerifier [0x00CAABF2+2510930]
+	GetHandleVerifier [0x00CD8EC1+2700065]
+	GetHandleVerifier [0x00CDC86C+2714828]
+	GetHandleVerifier [0x00AE3480+645344]
+	(No symbol) [0x009D0FD2]
+	(No symbol) [0x009D6C68]
+	(No symbol) [0x009D6D4B]
+	(No symbol) [0x009E0D6B]
+	BaseThreadInitThunk [0x77C500F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77EA7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77EA7B8E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20230228 20:47:58.169" endtime="20230228 20:48:34.067"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Bdd">Bdd</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230228 20:48:34.011" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00A337D3]
+	(No symbol) [0x009C8B81]
+	(No symbol) [0x008CB36D]
+	(No symbol) [0x008AE5DA]
+	(No symbol) [0x0091F0CB]
+	(No symbol) [0x00930A56]
+	(No symbol) [0x0091B216]
+	(No symbol) [0x008F0D97]
+	(No symbol) [0x008F253D]
+	GetHandleVerifier [0x00CAABF2+2510930]
+	GetHandleVerifier [0x00CD8EC1+2700065]
+	GetHandleVerifier [0x00CDC86C+2714828]
+	GetHandleVerifier [0x00AE3480+645344]
+	(No symbol) [0x009D0FD2]
+	(No symbol) [0x009D6C68]
+	(No symbol) [0x009D6D4B]
+	(No symbol) [0x009E0D6B]
+	BaseThreadInitThunk [0x77C500F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77EA7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77EA7B8E+238]
+</msg>
+</errors>
+</robot>
