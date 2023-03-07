@@ -17,11 +17,12 @@ fechar navegador
 
 *** Test Cases***
 
-Cenario 1: teste de abrir site do google
+Cenário 1: teste de abrir site do google
+    [Tags]  regressivo
     abrir site do google
-    fechar navegador
+    fechar navegador    
 
-Cenario 2: teste de abrir site da globo
+Cenário 2: teste de abrir site da globo
     abrir site da globo
     fechar navegador
 

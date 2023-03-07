@@ -6,7 +6,7 @@ Library     SeleniumLibrary
 ${NomeDaMusica}     Ariana Grande Positions
 
 #Váriáveis de configuração
-${URL}      https://www.youtube.com/
+${URL}      https://www.youtube.com/ 
 ${Browser}      chrome
 
 #Elementos
@@ -33,13 +33,14 @@ E clico na primeira opção da lista
 Então o vídeo é executado
     Wait Until Element Is Visible   ${Prova}  10
     Element Should Be Visible       ${Prova}
-    Sleep 1s
+    #Sleep 1s
     Close Browser
      
 
 *** Test Cases***
 
 Cenario 1: executar vídeo no site do youtube
+    [Tags]  regressivo
     Dado que eu acesso o site do youtube
     Quando digito o nome da música
     E clico no botão buscar
